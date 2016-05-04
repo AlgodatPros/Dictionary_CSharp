@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.konkrete_Klassen
 {
-    class SetSortedArray : SortedArray
+    class SetSortedArray : MultisetSortedArray
     {
 
 		public override bool Insert (int elem){

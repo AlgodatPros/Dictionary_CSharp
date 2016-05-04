@@ -59,11 +59,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="abstrakte Klassen\Array.cs" />
-    <Compile Include="abstrakte Klassen\UnsortedArray.cs" />
-    <Compile Include="abstrakte Klassen\SortedArray.cs" />
     <Compile Include="abstrakte Klassen\LinkedList.cs" />
-    <Compile Include="abstrakte Klassen\SortedLinkedList.cs" />
-    <Compile Include="abstrakte Klassen\UnsortedLinkedList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

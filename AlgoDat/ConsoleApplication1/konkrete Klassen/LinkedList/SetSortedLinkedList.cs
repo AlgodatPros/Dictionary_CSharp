@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.konkrete_Klassen
 {
-    class SetSortedLinkedList : SortedLinkedList
+    class SetSortedLinkedList : MultisetSortedLinkedList
     {
 		public override bool Insert (int elem){
 			if (!Search (elem)) {

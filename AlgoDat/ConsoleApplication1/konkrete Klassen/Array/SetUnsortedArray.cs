@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApplication1.konkrete_Klassen
 {
 
-    class SetUnsortedArray : UnsortedArray
+    class SetUnsortedArray : MultisetUnsortedArray
     {
 		public override bool Insert (int elem){
 			if (!Search (elem)) {
