@@ -39,7 +39,7 @@ namespace ConsoleApplication1
 			{
 				int index = _Search(elem, 0, limit-1);
 				if (index < 0) { //Wenn es den Wert schon gibt, dann ist der Index negativ
-					index = -index;
+					index = -(index+1);
 				}
 
 				if (array [index] != 0) {
@@ -69,14 +69,13 @@ namespace ConsoleApplication1
 			if (left <= right)
 			{
 				int middle = (left + right) / 2;
-				if (elem == array[middle])
-					return -middle; //negativ für Duplikaterkennung
-				else if (elem < array[middle])
-					return _Search(elem, left, middle - 1);
+				if (elem == array [middle])
+					return -middle-1; //negativ für Duplikaterkennung und Erkennung wenn Duplikat bei Index=0
+				else if (elem < array [middle])
+					return _Search (elem, left, middle - 1);
 				else
-					return _Search(elem, middle + 1, right);
+					return _Search (elem, middle + 1, right);
 			}
-
 			return left;
 		}
 	}

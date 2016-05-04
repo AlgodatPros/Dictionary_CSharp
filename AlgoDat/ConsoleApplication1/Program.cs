@@ -13,7 +13,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Suche");
+           /* Console.WriteLine("Suche");
 			int search_elem = 12;//Convert.ToInt32(Console.ReadLine());
 
             IDictionary mua = new MultisetUnsortedArray();
@@ -56,7 +56,61 @@ namespace ConsoleApplication1
             mss.Print();
 
 
-            Console.ReadKey();
+            Console.ReadKey();*/
+			IDictionary[] dictionaries =  {
+				new MultisetSortedLinkedList(),
+				new SetSortedLinkedList(),
+				new MultisetUnsortedLinkedList(),
+				new SetUnsortedLinkedList(),
+				new MultisetSortedArray(),
+				new MultisetUnsortedArray(),
+				new SetSortedArray(),
+				new SetUnsortedArray()
+			};
+
+			string[] dictionaries_name =  {
+				"MultisetSortedLinkedList",
+				"SetSortedLinkedList",
+				"MultisetUnsortedLinkedList",
+				"SetUnsortedLinkedList",
+				"MultisetSortedArray",
+				"MultisetUnsortedArray",
+				"SetSortedArray",
+				"SetUnsortedArray"
+			};
+
+			/*IDictionary ssa = new SetSortedArray (); //91951
+			int[] insertarr = {9,1,9,5,1};
+			for (int i = 0; i < insertarr.Length; i++) {
+				ssa.Insert(insertarr[i]);
+				ssa.Print();
+			}*/
+
+			for (int d = 0; d < dictionaries.Length; d++) {
+				Console.WriteLine ();
+				Console.WriteLine ("----- Dictionary: " + dictionaries_name[d] + " -----");
+				Random a = new Random();
+				for (int i = 0; i < 5; i++)
+				{
+					int n = a.Next(1,10);
+					Console.WriteLine("=== Insert " + n + " ===");
+					dictionaries[d].Insert(n);
+					dictionaries[d].Print();
+					if (n % 2 == 0) {
+						Console.WriteLine("=== Search " + n + " ===");
+						Console.WriteLine (dictionaries [d].Search (n));
+						//Console.WriteLine("=== Delete " + n + " ===");
+						//dictionaries[d].Delete(n);
+						//dictionaries[d].Print();
+						//Console.WriteLine("=== Search " + n + " ===");
+						//Console.WriteLine (dictionaries [d].Search (n));
+					}
+				}
+			}
+
+
+
+
 
 
 

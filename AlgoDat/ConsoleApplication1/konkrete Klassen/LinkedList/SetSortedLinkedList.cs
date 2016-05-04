@@ -6,26 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.konkrete_Klassen
 {
-    /*class SetSortedLinkedList : Set_Sorted
+    class SetSortedLinkedList : SortedLinkedList
     {
-        public override bool Delete(int elem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool Insert(int elem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Print()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool Search(int elem)
-        {
-            throw new NotImplementedException();
-        }
-    }*/
+		public override bool Insert (int elem){
+			if (!Search (elem)) {
+				return base.Insert (elem);
+			} else {
+				return false;
+			}
+		}
+    }
 }
