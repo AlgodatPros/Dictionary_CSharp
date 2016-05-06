@@ -25,7 +25,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 		public override bool Insert(int elem)
 		{
-			if (limit == array.Length) {
+			if (limit == array.Length-1) {
 				Console.WriteLine ("Insert von " + elem + " fehlgeschlagen. Array ist voll!");
 				return false;
 			}
@@ -35,13 +35,13 @@ namespace ConsoleApplication1.konkrete_Klassen
 				return false;
 			}
 
-			if (limit == 0)
+			if (limit < 0)
 			{
 				array[0] = elem;
 			}
 			else
 			{
-				int index = _Search(elem, 0, limit-1);
+				int index = _Search(elem, 0, limit);
 				if (index < 0) { //Wenn es den Wert schon gibt, dann ist der Index negativ
 					index = -(index+1);
 				}
@@ -49,13 +49,15 @@ namespace ConsoleApplication1.konkrete_Klassen
 				if (array [index] != 0) {
 					//Verschiebe die Elemente eins nach rechts um Platz für das neue Element zu machen
 					//Array.Copy (array, index, array, index + 1, limit-index);
-					for (int i = limit; i > index; i--) {
+					for (int i = limit+1; i > index; i--) {
 						array [i] = array [i-1];
 					}
 				}
 				array [index] = elem;
+
 			}
 			limit++;
+
 
 			return true;
 		}
