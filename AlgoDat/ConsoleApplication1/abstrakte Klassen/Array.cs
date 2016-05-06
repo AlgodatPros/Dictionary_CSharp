@@ -5,7 +5,7 @@ namespace ConsoleApplication1
 	public abstract class Array : IDictionary
 	{
 		public int[] array = new int[20];
-		public int limit = -1;
+		public int limit = 0;
 
 		public Array ()
 		{
