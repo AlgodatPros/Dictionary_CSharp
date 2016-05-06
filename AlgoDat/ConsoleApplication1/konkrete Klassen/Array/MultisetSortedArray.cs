@@ -17,7 +17,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 		public override bool Delete(int elem){
 
-			return _Delete (-(_Search(elem, 0, limit)));
+			return _Delete (-(_Search(elem, 0, limit)+1));
 
 		}
 

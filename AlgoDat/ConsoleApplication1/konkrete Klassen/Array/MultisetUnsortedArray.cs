@@ -14,6 +14,16 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 		public override bool Insert(int elem)
 		{
+			if (limit == array.Length) {
+				Console.WriteLine ("Insert von " + elem + " fehlgeschlagen. Array ist voll!");
+				return false;
+			}
+
+			if (elem < 1) {
+				Console.WriteLine ("Nur positive Zahlen erlaubt!");
+				return false;
+			}
+
 			array[limit] = elem;
 			limit++;
 			return true;
