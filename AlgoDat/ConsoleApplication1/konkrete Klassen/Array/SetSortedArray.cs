@@ -10,8 +10,9 @@ namespace ConsoleApplication1.konkrete_Klassen
     {
 
 		public override bool Insert (int elem){
-			if (!Search (elem)) {
-				return base.Insert (elem);
+			int result = _Search(elem, 0, limit-1);
+			if (result > -1) {
+				return _Insert (elem,-(result+1));
 			} else {
 				return false;
 			}

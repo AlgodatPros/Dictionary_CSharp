@@ -22,9 +22,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 		}
 
 		//public abstract bool Insert (int elem);
-
-		public override bool Insert(int elem)
-		{
+		protected bool _Insert(int elem, int preSearchIndex = -1){
 			if (limit == array.Length) {
 				Console.WriteLine ("Insert von " + elem + " fehlgeschlagen. Array ist voll!");
 				return false;
@@ -41,9 +39,14 @@ namespace ConsoleApplication1.konkrete_Klassen
 			}
 			else
 			{
-				int index = _Search(elem, 0, limit-1);
-				if (index < 0) { //Wenn es den Wert schon gibt, dann ist der Index negativ
-					index = -(index+1);
+				int index = -1;
+				if (preSearchIndex < 0) {
+					index = _Search (elem, 0, limit - 1);
+					if (index < 0) { //Wenn es den Wert schon gibt, dann ist der Index negativ
+						index = -(index + 1);
+					}
+				} else {
+					index = preSearchIndex;
 				}
 
 				if (array [index] != 0) {
@@ -59,6 +62,10 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 			return true;
 		}
+		public override bool Insert(int elem)
+		{
+			return _Insert (elem);
+		}
 
 		public override bool Search (int elem){
 			int result = _Search(elem, 0, limit-1);
@@ -68,7 +75,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return false;
 		}
 
-		private int _Search(int elem, int left, int right)
+		protected int _Search(int elem, int left, int right)
 		{
 			if (left <= right)
 			{
