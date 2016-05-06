@@ -9,8 +9,9 @@ namespace ConsoleApplication1.konkrete_Klassen
     class SetSortedLinkedList : MultisetSortedLinkedList
     {
 		public override bool Insert (int elem){
-			if (!Search (elem)) {
-				return base.Insert (elem);
+			LinkedListNode [] result = _Search (elem);
+			if (result.Length < 3) {
+				return _Insert (elem, result);
 			} else {
 				return false;
 			}

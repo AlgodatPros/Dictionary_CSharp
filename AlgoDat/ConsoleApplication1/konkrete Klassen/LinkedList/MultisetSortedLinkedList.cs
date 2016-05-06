@@ -17,7 +17,11 @@ namespace ConsoleApplication1.konkrete_Klassen
 			LinkedListNode[] result = _Search (elem);
 			LinkedListNode prevNode = result [0];
 			LinkedListNode pointer = result [1];
-			return _Delete (prevNode, pointer);
+			if (result.Length == 3) {
+				return _Delete (prevNode, pointer);
+			} else {
+				return false;
+			}
 		}
 
 		public override bool Search (int elem)
@@ -50,9 +54,15 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 
 		}
+		protected bool _Insert(int elem, LinkedListNode[] preSearchResult = null){
 
-		public override bool Insert(int elem){
-			LinkedListNode[] result = _Search (elem);
+			LinkedListNode[] result = null;
+			if (preSearchResult == null) {
+				result = _Search (elem);
+			} else {
+				result = preSearchResult;
+			}
+
 			LinkedListNode prevNode = result [0];
 			LinkedListNode pointer = result [1];
 
@@ -70,6 +80,10 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return true;
 
 
+		}
+
+		public override bool Insert(int elem){
+			return _Insert (elem);
 		}
 
 	}
