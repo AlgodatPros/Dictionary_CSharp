@@ -55,6 +55,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 		}*/
 
 		public override bool Insert(int elem){
+
 			LinkedListNode newNode = new LinkedListNode (elem);
 			if (head == null) {
 				head = newNode;
