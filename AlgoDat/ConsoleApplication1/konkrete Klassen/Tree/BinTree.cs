@@ -32,7 +32,6 @@ namespace ConsoleApplication1.konkrete_Klassen
 				if (root == null)
 				{
 					root = newNode;
-					root.parent = root;
 				}
 
 				return newNode;
