@@ -58,54 +58,66 @@ namespace ConsoleApplication1
 
             Console.ReadKey();*/
 			IDictionary[] dictionaries =  {
-				new MultisetSortedLinkedList(),
-				new SetSortedLinkedList(),
-				new MultisetUnsortedLinkedList(),
-				new SetUnsortedLinkedList(),
-				new MultisetSortedArray(),
+				//new BinTree(),
+				new AVLTree(),
+				//new MultisetSortedLinkedList(),
+				//new SetSortedLinkedList(),
+				//new MultisetUnsortedLinkedList(),
+				//new SetUnsortedLinkedList(),
+				/*new MultisetSortedArray(),
 				new MultisetUnsortedArray(),
 				new SetSortedArray(),
-				new SetUnsortedArray()
+				new SetUnsortedArray()*/
 			};
 
 			string[] dictionaries_name =  {
-				"MultisetSortedLinkedList",
-				"SetSortedLinkedList",
-				"MultisetUnsortedLinkedList",
-				"SetUnsortedLinkedList",
-				"MultisetSortedArray",
+				//"BinTree",
+				"AVLTree",
+				//"MultisetSortedLinkedList",
+				//"SetSortedLinkedList",
+				//"MultisetUnsortedLinkedList",
+				//"SetUnsortedLinkedList",
+				/*"MultisetSortedArray",
 				"MultisetUnsortedArray",
 				"SetSortedArray",
-				"SetUnsortedArray"
+				"SetUnsortedArray"*/
 			};
 
-			/*IDictionary ssa = new SetSortedArray (); //91951
-			int[] insertarr = {9,1,9,5,1};
+			/*IDictionary btree = new BinTree (); //91951
+			int[] insertarr = {6,3,2,4,9,8,10,1,5};
 			for (int i = 0; i < insertarr.Length; i++) {
-				ssa.Insert(insertarr[i]);
-				ssa.Print();
-			}*/
-
+				btree.Insert(insertarr[i]);
+				btree.Print();
+			}
+			Random a = new Random();
+			int n = a.Next(1,10);
+			Console.WriteLine("=== Delete " + n + " ===");
+			btree.Delete(3);
+			btree.Print();*/
 			for (int d = 0; d < dictionaries.Length; d++) {
 				Console.WriteLine ();
 				Console.WriteLine ("----- Dictionary: " + dictionaries_name[d] + " -----");
 				Random a = new Random();
-				for (int i = 0; i < 5; i++)
+				Random b = new Random (65465465);
+				for (int i = 0; i < 50; i++)
 				{
-					int n = a.Next(1,10);
-					Console.WriteLine("=== Insert " + n + " ===");
+					int n = a.Next(1,20);
+					//-Console.WriteLine("=== Insert " + n + " ===");
 					dictionaries[d].Insert(n);
 					dictionaries[d].Print();
 					if (n % 2 == 0) {
-						Console.WriteLine("=== Search " + n + " ===");
-						Console.WriteLine (dictionaries [d].Search (n));
-						//Console.WriteLine("=== Delete " + n + " ===");
-						//dictionaries[d].Delete(n);
+
+						int k = b.Next (1, 10);
+						//Console.WriteLine ("Search " + k + ": " + dictionaries [d].Search (n));
+						//Console.WriteLine("=== Delete " + k + " ===");
 						//dictionaries[d].Print();
-						//Console.WriteLine("=== Search " + n + " ===");
-						//Console.WriteLine (dictionaries [d].Search (n));
+						dictionaries[d].Delete(k);
+						dictionaries[d].Print();
+						//Console.WriteLine ("Search " + k + ": " + dictionaries [d].Search (k));
 					}
 				}
+
+
 			}
 
 

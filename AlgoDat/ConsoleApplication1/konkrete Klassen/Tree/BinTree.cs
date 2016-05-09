@@ -24,47 +24,49 @@ namespace ConsoleApplication1.konkrete_Klassen
 	{
 		public TreeNode root = null;
 
-		public TreeNode _Insert(int elem, TreeNode node)
-		{
-			if (node == null)
-			{
-				TreeNode newNode = new TreeNode(elem);
-				if (root == null)
-				{
-					root = newNode;
-				}
-
-				return newNode;
+		public bool _Insert(int elem, ref TreeNode parentnode) {
+			if (Search (elem)) {
+				return false;
 			}
-			else
-			{
-				TreeNode temp = null;
-
-				if (elem <= node.elem)
-				{
-					temp = _Insert(elem, node.left);
-					node.left = temp;
-
-				}
-				if (elem > node.elem)
-				{
-					temp = _Insert(elem, node.right);
-					node.right = temp;
-				}
-
-				temp.parent = node;
-
-				return node;
+			if (root == null) {
+				root = new TreeNode (elem, null);
 			}
+			else {
+				TreeNode n = root;
+				TreeNode parent;
+				while (true) {
+					if (n.elem == elem)
+						return false;
+
+					parent = n;
+
+					bool nextLeft = n.elem > elem;
+					n = nextLeft ? n.left : n.right;
+
+					if (n == null) {
+						if (nextLeft) {
+							parent.left = new TreeNode(elem, parent);
+						} else {
+							parent.right = new TreeNode(elem, parent);
+						}
+
+						parentnode = parent;
+						//Console.WriteLine ("parent: " + parent.elem);
+						//treeprint(root,"", false);
+						//rebalance(parent);
+						break;
+					}
+				}
+			}
+			return true;
 		}
+
+
 
 		public virtual bool Insert(int elem)
 		{
-			if (!Search (elem)) {
-				if (_Insert (elem, root) != null)
-					return true;
-			}
-			return false;
+			TreeNode tmp = null;
+			return _Insert(elem, ref tmp);
 		}
 
 		public bool Search(int elem)
@@ -94,10 +96,11 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 		public virtual bool Delete(int elem)
 		{
-			return _Delete(null, elem);
+			TreeNode tmp = null;
+			return _Delete(null, elem, ref tmp);
 		}
 
-		public bool _Delete(TreeNode node, int elem)
+		public bool _Delete(TreeNode node, int elem, ref TreeNode parentnode)
 		{
 
 			if (node == null)
@@ -111,12 +114,12 @@ namespace ConsoleApplication1.konkrete_Klassen
 			{
 				TreeNode minNode = getMinNode(node.right);
 				node.elem = minNode.elem;
-
-				_Delete(minNode, minNode.elem);
+				TreeNode tmp = null;
+				_Delete(minNode, minNode.elem, ref tmp);
 
 			}
 			else
-			{ //one or zero child  
+			{ //one or zero child
 				if (node.left == null)
 				{
 					if (node.parent == null)
@@ -131,6 +134,8 @@ namespace ConsoleApplication1.konkrete_Klassen
 							node.parent.left = node.right;
 						else
 							node.parent.right = node.right;
+
+						parentnode = node.parent;
 					}
 				}
 				else if (node.right == null)
@@ -144,6 +149,8 @@ namespace ConsoleApplication1.konkrete_Klassen
 							node.parent.left = node.left;
 						else
 							node.parent.right = node.left;
+
+						parentnode = node.parent;
 					}
 				}
 			}
@@ -167,7 +174,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 			_Print(root);
 			Console.WriteLine();
-			//treeprint(root, "");
+			treeprint(root, "");
 
 		}
 
@@ -176,7 +183,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			if (root != null)
 			{
 				_Print( root.left);
-				Console.Write(" " + root.elem );
+				Console.Write(" " + root.elem.ToString().PadLeft(2) );
 				_Print( root.right);
 			}
 		}
