@@ -9,7 +9,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 	public class TreeNode
 	{
-		//public int balance = 0;
+		public int balance = 0;
 		public int elem;
 		public TreeNode left, right, parent = null;
 
