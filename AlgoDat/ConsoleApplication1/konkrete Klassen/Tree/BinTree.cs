@@ -24,10 +24,12 @@ namespace ConsoleApplication1.konkrete_Klassen
 	{
 		public TreeNode root = null;
 
+		public bool _Insert(int elem){
+			TreeNode tmp = null;
+			return _Insert (elem, ref tmp);
+		}
+
 		public bool _Insert(int elem, ref TreeNode parentnode) {
-			if (Search (elem)) {
-				return false;
-			}
 			if (root == null) {
 				root = new TreeNode (elem, null);
 			}
@@ -50,10 +52,8 @@ namespace ConsoleApplication1.konkrete_Klassen
 							parent.right = new TreeNode(elem, parent);
 						}
 
-						parentnode = parent;
-						//Console.WriteLine ("parent: " + parent.elem);
-						//treeprint(root,"", false);
-						//rebalance(parent);
+						parentnode = parent; // set Node for rebalancing
+
 						break;
 					}
 				}
@@ -96,8 +96,12 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 		public virtual bool Delete(int elem)
 		{
+			return _Delete(null, elem);
+		}
+
+		public bool _Delete(TreeNode node, int elem){
 			TreeNode tmp = null;
-			return _Delete(null, elem, ref tmp);
+			return _Delete(node, elem, ref tmp);
 		}
 
 		public bool _Delete(TreeNode node, int elem, ref TreeNode parentnode)
@@ -114,8 +118,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			{
 				TreeNode minNode = getMinNode(node.right);
 				node.elem = minNode.elem;
-				TreeNode tmp = null;
-				_Delete(minNode, minNode.elem, ref tmp);
+				_Delete(minNode, minNode.elem);
 
 			}
 			else
