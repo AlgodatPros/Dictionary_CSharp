@@ -4,8 +4,8 @@ namespace ConsoleApplication1
 {
 	public abstract class Array : IDictionary
 	{
-		public int[] array = new int[20];
-		public int limit = 0;
+		protected int[] array = new int[20];
+		protected int limit = 0;
 
 		public Array ()
 		{
@@ -23,7 +23,7 @@ namespace ConsoleApplication1
 		public abstract bool Insert (int elem);
 		public abstract bool Delete(int elem);
 
-		public bool _Delete(int index)
+		protected bool _Delete(int index)
 		{
 			//int index = _Search(elem);
 			if (index >= 0)

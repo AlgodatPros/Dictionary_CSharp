@@ -60,6 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="abstrakte Klassen\Array.cs" />
     <Compile Include="abstrakte Klassen\LinkedList.cs" />
+    <Compile Include="Schnittstellen\INode.cs" />
+    <Compile Include="abstrakte Klassen\Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

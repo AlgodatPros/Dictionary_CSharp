@@ -34,7 +34,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			}
 		}
 
-		public LinkedListNode[] _Search(int elem){
+		protected LinkedListNode[] _Search(int elem){
 			LinkedListNode pointer = head;
 			LinkedListNode prevNode = null;
 

@@ -58,29 +58,31 @@ namespace ConsoleApplication1
 
             Console.ReadKey();*/
 			IDictionary[] dictionaries =  {
-				//new BinTree(),
+				new BinTree(),
+
 				new AVLTree(),
-				//new MultisetSortedLinkedList(),
-				//new SetSortedLinkedList(),
-				//new MultisetUnsortedLinkedList(),
-				//new SetUnsortedLinkedList(),
-				/*new MultisetSortedArray(),
+
+				new MultisetSortedLinkedList(),
+				new SetSortedLinkedList(),
+				new MultisetUnsortedLinkedList(),
+				new SetUnsortedLinkedList(),
+				new MultisetSortedArray(),
 				new MultisetUnsortedArray(),
 				new SetSortedArray(),
-				new SetUnsortedArray()*/
+				new SetUnsortedArray()
 			};
 
 			string[] dictionaries_name =  {
-				//"BinTree",
+				"BinTree",
 				"AVLTree",
-				//"MultisetSortedLinkedList",
-				//"SetSortedLinkedList",
-				//"MultisetUnsortedLinkedList",
-				//"SetUnsortedLinkedList",
-				/*"MultisetSortedArray",
+				"MultisetSortedLinkedList",
+				"SetSortedLinkedList",
+				"MultisetUnsortedLinkedList",
+				"SetUnsortedLinkedList",
+				"MultisetSortedArray",
 				"MultisetUnsortedArray",
 				"SetSortedArray",
-				"SetUnsortedArray"*/
+				"SetUnsortedArray"
 			};
 
 			/*IDictionary btree = new BinTree (); //91951
@@ -99,9 +101,9 @@ namespace ConsoleApplication1
 				Console.WriteLine ("----- Dictionary: " + dictionaries_name[d] + " -----");
 				Random a = new Random();
 				Random b = new Random (65465465);
-				for (int i = 0; i < 50; i++)
+				for (int i = 0; i < 30; i++)
 				{
-					int n = a.Next(1,20);
+					int n = a.Next(1,50);
 					//-Console.WriteLine("=== Insert " + n + " ===");
 					dictionaries[d].Insert(n);
 					dictionaries[d].Print();

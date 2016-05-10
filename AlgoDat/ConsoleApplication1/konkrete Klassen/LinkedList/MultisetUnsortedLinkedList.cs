@@ -19,7 +19,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return false;
 		}
 
-		public LinkedListNode[] _Search(int elem){
+		protected LinkedListNode[] _Search(int elem){
 			LinkedListNode pointer = head;
 			LinkedListNode prevNode = null;
 

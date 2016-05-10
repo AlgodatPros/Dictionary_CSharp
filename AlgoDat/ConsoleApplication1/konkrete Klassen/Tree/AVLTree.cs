@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApplication1.Tree;
+
+namespace ConsoleApplication1.Tree{
+	public class AVLTreeNode : TreeNode<AVLTreeNode> {
+		public int balance = 0;
+	}
+}
 
 namespace ConsoleApplication1.konkrete_Klassen
 {
-	public class AVLTree : BinTree {
+	public class AVLTree : Tree<AVLTreeNode> {
 
 		public override bool Insert(int elem) {
-			TreeNode parentnode = null;
+			AVLTreeNode parentnode = null;
 			bool result = _Insert(elem, ref parentnode);
 			if (result) {
 				if (parentnode != null) {
@@ -19,10 +26,8 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return result;
 		}
 
-
-
 		public override bool Delete(int elem) {
-			TreeNode parentnode = null;
+			AVLTreeNode parentnode = null;
 			bool result = _Delete (null, elem, ref parentnode);
 			if (result) {
 				if (parentnode != null) {
@@ -32,7 +37,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return result;
 		}
 
-		private void rebalance(TreeNode n) {
+		private void rebalance(AVLTreeNode n) {
 			setBalance(n);
 
 			if (n.balance == -2) {
@@ -55,9 +60,9 @@ namespace ConsoleApplication1.konkrete_Klassen
 			}
 		}
 
-		private TreeNode rotateLeft(TreeNode a) {
+		private AVLTreeNode rotateLeft(AVLTreeNode a) {
 
-			TreeNode b = a.right;
+			AVLTreeNode b = a.right;
 			b.parent = a.parent;
 
 			a.right = b.left;
@@ -81,9 +86,9 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return b;
 		}
 
-		private TreeNode rotateRight(TreeNode a) {
+		private AVLTreeNode rotateRight(AVLTreeNode a) {
 
-			TreeNode b = a.left;
+			AVLTreeNode b = a.left;
 			b.parent = a.parent;
 
 			a.left = b.right;
@@ -107,28 +112,41 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return b;
 		}
 
-		private TreeNode rotateLeftThenRight(TreeNode n) {
+		private AVLTreeNode rotateLeftThenRight(AVLTreeNode n) {
 			n.left = rotateLeft(n.left);
 			return rotateRight(n);
 		}
 
-		private TreeNode rotateRightThenLeft(TreeNode n) {
+		private AVLTreeNode rotateRightThenLeft(AVLTreeNode n) {
 			n.right = rotateRight(n.right);
 			return rotateLeft(n);
 		}
 
-		private int height(TreeNode n) {
+		private int height(AVLTreeNode n) {
 			if (n == null)
 				return -1;
 			return 1 + Math.Max(height(n.left), height(n.right));
 		}
 
 
-		private void setBalance(params TreeNode[] nodes) {
+		private void setBalance(params AVLTreeNode[] nodes) {
 			foreach (var n in nodes) {
 				n.balance = height(n.right) - height(n.left);
 			}
 
+		}
+
+		protected override void treeprint(AVLTreeNode root, String prefix)
+		{
+			if (root == null)
+			{
+				Console.WriteLine(prefix + "+- <null>");
+				return;
+			}
+
+			Console.WriteLine(prefix + "+- " + root.elem + " (" + root.balance +")");
+			treeprint( root.left, prefix + "|  ");
+			treeprint( root.right, prefix + "!  ");
 		}
 
 	}
