@@ -11,11 +11,6 @@ namespace ConsoleApplication1
     {
         int key = 0;
 
-        public HashTabSepChain()
-            : base()
-        {
-            Init();
-        }
 
         override public bool Search(int zahl)
         {

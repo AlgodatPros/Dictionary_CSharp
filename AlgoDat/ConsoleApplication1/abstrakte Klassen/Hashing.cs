@@ -11,14 +11,12 @@ namespace ConsoleApplication1
     {
 		protected LinkedList[] HashTable = new LinkedList[10];
 		
-
-        protected void Init()
-        {
-            for (int i = 0; i < HashTable.Length; i++)
-            {
-                HashTable[i] = new SetUnsortedLinkedList();
-            }
-        }
+		protected Hashing(){
+			for (int i = 0; i < HashTable.Length; i++)
+			{
+				HashTable[i] = new SetUnsortedLinkedList();
+			}
+		}
 
         protected int hash(int x)
         {
