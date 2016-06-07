@@ -6,7 +6,6 @@ namespace ConsoleApplication1
 	{
 		protected class LinkedListNode {
 			public LinkedListNode next = null;
-			//public LinkedListNode prev = null;
 			public int elem = 0;
 
 			public LinkedListNode (int _elem) {

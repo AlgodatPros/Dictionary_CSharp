@@ -43,17 +43,6 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return _Delete (prevNode, pointer);
 		}
 
-		/*public LinkedListNode _Search(int elem){
-			LinkedListNode pointer = head;
-			while (pointer != null) {
-				if (pointer.elem == elem) {
-					return pointer;
-				}
-				pointer = pointer.next;
-			}
-			return null;
-		}*/
-
 		public override bool Insert(int elem){
 
 			LinkedListNode newNode = new LinkedListNode (elem);

@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Schnittstellen\Dictionary.cs" />
     <Compile Include="konkrete Klassen\LinkedList\MultisetSortedLinkedList.cs" />
     <Compile Include="konkrete Klassen\Array\MultisetSortedArray.cs" />
     <Compile Include="konkrete Klassen\Array\MultisetUnsortedArray.cs" />
@@ -62,6 +61,7 @@
     <Compile Include="abstrakte Klassen\LinkedList.cs" />
     <Compile Include="Schnittstellen\INode.cs" />
     <Compile Include="abstrakte Klassen\Tree.cs" />
+    <Compile Include="Schnittstellen\IDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,11 +10,12 @@ namespace ConsoleApplication1.konkrete_Klassen
     {
 
 		public override bool Insert (int elem){
-			int result = _Search(elem, 0, limit-1);
-			if (result > -1) {
-				return _Insert (elem,-(result+1));
-			} else {
+			bool isDuplicate = false;
+			int result = _Search(elem, ref isDuplicate);
+			if (isDuplicate) {
 				return false;
+			} else {
+				return _Insert (elem, result);
 			}
 		}
 

@@ -16,12 +16,9 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 
 		public override bool Delete(int elem){
-
-			return _Delete (-(_Search(elem, 0, limit-1)+1));
-
+			return _Delete (_Search(elem));
 		}
 
-		//public abstract bool Insert (int elem);
 		protected bool _Insert(int elem, int preSearchIndex = -1){
 			if (limit == array.Length) {
 				Console.WriteLine ("Insert von " + elem + " fehlgeschlagen. Array ist voll!");
@@ -41,10 +38,12 @@ namespace ConsoleApplication1.konkrete_Klassen
 			{
 				int index = -1;
 				if (preSearchIndex < 0) {
-					index = _Search (elem, 0, limit - 1);
-					if (index < 0) { //Wenn es den Wert schon gibt, dann ist der Index negativ
+					index = _Search (elem); //oder _Search (elem, 0, limit - 1);
+
+					if (index < 0) {
 						index = -(index + 1);
 					}
+
 				} else {
 					index = preSearchIndex;
 				}
@@ -68,11 +67,23 @@ namespace ConsoleApplication1.konkrete_Klassen
 		}
 
 		public override bool Search (int elem){
+			bool isDuplicate = false;
+			_Search(elem, ref isDuplicate);
+			return isDuplicate;
+		}
+
+		protected int _Search(int elem){
+			bool tmp = false;
+			return _Search (elem, ref tmp);
+		}
+
+		protected int _Search(int elem, ref bool isDuplicate){
 			int result = _Search(elem, 0, limit-1);
 			if (result < 0) {
-				return true;
+				isDuplicate = true;
 			}
-			return false;
+			result = -(result + 1);
+			return result;
 		}
 
 		protected int _Search(int elem, int left, int right)

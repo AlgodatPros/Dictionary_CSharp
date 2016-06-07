@@ -25,7 +25,6 @@ namespace ConsoleApplication1
 
 		protected bool _Delete(int index)
 		{
-			//int index = _Search(elem);
 			if (index >= 0)
 			{
 				array[index] = 0;

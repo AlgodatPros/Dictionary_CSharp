@@ -37,6 +37,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			return result;
 		}
 
+		//<Rebalancing>
 		private void rebalance(AVLTreeNode n) {
 			setBalance(n);
 
@@ -73,17 +74,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			b.left = a;
 			a.parent = b;
 
-			if (b.parent != null) {
-				if (b.parent.right == a) {
-					b.parent.right = b;
-				} else {
-					b.parent.left = b;
-				}
-			}
-
-			setBalance(a, b);
-
-			return b;
+			return finishRotate (ref a, ref b);
 		}
 
 		private AVLTreeNode rotateRight(AVLTreeNode a) {
@@ -99,6 +90,11 @@ namespace ConsoleApplication1.konkrete_Klassen
 			b.right = a;
 			a.parent = b;
 
+			return finishRotate (ref a, ref b);
+		}
+
+		
+		private AVLTreeNode finishRotate(ref AVLTreeNode a, ref AVLTreeNode b){
 			if (b.parent != null) {
 				if (b.parent.right == a) {
 					b.parent.right = b;
@@ -111,6 +107,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 
 			return b;
 		}
+
 
 		private AVLTreeNode rotateLeftThenRight(AVLTreeNode n) {
 			n.left = rotateLeft(n.left);
@@ -135,6 +132,7 @@ namespace ConsoleApplication1.konkrete_Klassen
 			}
 
 		}
+		//</Rebalancing>
 
 		protected override void treeprint(AVLTreeNode root, String prefix)
 		{

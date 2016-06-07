@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Namespace für konrete Klassen
+//Namespace für konkrete Klassen
 using ConsoleApplication1.konkrete_Klassen;
 
 namespace ConsoleApplication1
@@ -103,8 +103,8 @@ namespace ConsoleApplication1
 				Random b = new Random (65465465);
 				for (int i = 0; i < 30; i++)
 				{
-					int n = a.Next(1,50);
-					//-Console.WriteLine("=== Insert " + n + " ===");
+					int n = a.Next(1,20);
+					//Console.WriteLine("=== Insert " + n + " ===");
 					dictionaries[d].Insert(n);
 					dictionaries[d].Print();
 					if (n % 2 == 0) {
