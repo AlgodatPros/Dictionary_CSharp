@@ -62,6 +62,9 @@
     <Compile Include="Schnittstellen\INode.cs" />
     <Compile Include="abstrakte Klassen\Tree.cs" />
     <Compile Include="Schnittstellen\IDictionary.cs" />
+    <Compile Include="konkrete Klassen\Hashing\HashTabQuadProb.cs" />
+    <Compile Include="konkrete Klassen\Hashing\HashTabSepChain.cs" />
+    <Compile Include="abstrakte Klassen\Hashing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -76,4 +79,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="konkrete Klassen\Hashing\" />
+  </ItemGroup>
 </Project>

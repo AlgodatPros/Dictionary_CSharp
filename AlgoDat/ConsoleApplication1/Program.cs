@@ -69,7 +69,8 @@ namespace ConsoleApplication1
 				new MultisetSortedArray(),
 				new MultisetUnsortedArray(),
 				new SetSortedArray(),
-				new SetUnsortedArray()
+				new SetUnsortedArray(),
+				new HashTabSepChain()
 			};
 
 			string[] dictionaries_name =  {
@@ -82,7 +83,8 @@ namespace ConsoleApplication1
 				"MultisetSortedArray",
 				"MultisetUnsortedArray",
 				"SetSortedArray",
-				"SetUnsortedArray"
+				"SetUnsortedArray",
+				"HashTabSepChain"
 			};
 
 			/*IDictionary btree = new BinTree (); //91951
