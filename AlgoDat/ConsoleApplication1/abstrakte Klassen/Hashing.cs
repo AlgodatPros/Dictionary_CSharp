@@ -10,6 +10,7 @@ namespace ConsoleApplication1
     abstract class Hashing : IDictionary
     {
 		protected LinkedList[] HashTable = new LinkedList[10];
+        protected int?[] ArrayHashTable = new int?[10]; 
 		
 		protected Hashing(){
 			for (int i = 0; i < HashTable.Length; i++)

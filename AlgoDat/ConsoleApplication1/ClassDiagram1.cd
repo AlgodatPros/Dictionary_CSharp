@@ -1,117 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ConsoleApplication1.Multiset_Sorted" Collapsed="true">
-    <Position X="2.25" Y="4.25" Width="1.5" />
+    <Position X="1.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>abstrakte Klassen\Multiset_Sorted.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ConsoleApplication1.Multiset_Unsorted" Collapsed="true">
-    <Position X="11" Y="4.5" Width="1.5" />
+  <Class Name="ConsoleApplication1.HashTabSepChain" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
-      <FileName>abstrakte Klassen\Multiset_Unsorted.cs</FileName>
+      <HashCode>AAAAAEAAAAAAAAAAAAAEAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>konkrete Klassen\Hashing\HashTabSepChain.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ConsoleApplication1.Set_Sorted" Collapsed="true">
-    <Position X="16.5" Y="4.5" Width="1.5" />
+    <Position X="11.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>abstrakte Klassen\Set_Sorted.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ConsoleApplication1.Set_Unsorted" Collapsed="true">
-    <Position X="6.75" Y="4.5" Width="1.5" />
+  <Class Name="ConsoleApplication1.Array" Collapsed="true">
+    <Position X="4.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
-      <FileName>abstrakte Klassen\Set_Unsorted.cs</FileName>
+      <HashCode>AAAAAEAAAAAAAAAAAAgAAAAAAAEAAAAAAAAAAIAkAAA=</HashCode>
+      <FileName>abstrakte Klassen\Array.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ConsoleApplication1.Program" Collapsed="true">
-    <Position X="8" Y="1.75" Width="1.5" />
+    <Position X="7" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.MultisetSortedArray" Collapsed="true">
-    <Position X="1" Y="5.5" Width="1.5" />
+    <Position X="5.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAMAAAAAAAEAAAAAAAAAAAAEAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>konkrete Klassen\Array\MultisetSortedArray.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.MultisetUnsortedArray" Collapsed="true">
-    <Position X="9.75" Y="5.75" Width="1.5" />
+    <Position X="3.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAMAAAAAAAAAAAAgAAAAAAAEAAEAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAMAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>konkrete Klassen\Array\MultisetUnsortedArray.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.SetSortedArray" Collapsed="true">
-    <Position X="14.25" Y="5.75" Width="1.5" />
+    <Position X="5.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>konkrete Klassen\Array\SetSortedArray.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.SetUnsortedArray" Collapsed="true">
-    <Position X="5.5" Y="5.75" Width="1.5" />
+    <Position X="3.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>konkrete Klassen\Array\SetUnsortedArray.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.MultisetSortedLinkedList" Collapsed="true">
-    <Position X="3.25" Y="5.5" Width="1.5" />
+    <Position X="10.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAMAAAAAAAEAAAAAAAAAAAAEAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>konkrete Klassen\LinkedList\MultisetSortedLinkedList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.MultisetUnsortedLinkedList" Collapsed="true">
-    <Position X="12" Y="5.75" Width="1.5" />
+    <Position X="8" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAMAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>konkrete Klassen\LinkedList\MultisetUnsortedLinkedList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.SetSortedLinkedList" Collapsed="true">
-    <Position X="16.5" Y="5.75" Width="1.5" />
+    <Position X="10.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>konkrete Klassen\LinkedList\SetSortedLinkedList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.SetUnsortedLinkedList" Collapsed="true">
-    <Position X="7.75" Y="5.75" Width="1.5" />
+    <Position X="8" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>konkrete Klassen\LinkedList\SetUnsortedLinkedList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.Tree.AVLTree" Collapsed="true">
-    <Position X="18.75" Y="7.25" Width="1.5" />
+    <Position X="15.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>konkrete Klassen\Tree\AVLTree.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApplication1.konkrete_Klassen.Tree.BinTree" Collapsed="true">
-    <Position X="18.75" Y="5.75" Width="1.5" />
+    <Position X="15.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
       <FileName>konkrete Klassen\Tree\BinTree.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ConsoleApplication1.LinkedList" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAIAkAgA=</HashCode>
+      <FileName>abstrakte Klassen\LinkedList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApplication1.Hashing" Collapsed="true">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAgAAAAAAACAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>abstrakte Klassen\Hashing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="ConsoleApplication1.IDictionary" Collapsed="true">
-    <Position X="9.5" Y="3" Width="1.5" />
+    <Position X="9.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAkAAA=</HashCode>
-      <FileName>Schnittstellen\Dictionary.cs</FileName>
+      <FileName>Schnittstellen\IDictionary.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
