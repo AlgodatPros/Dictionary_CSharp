@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApplication1.konkrete_Klassen;
+using DictionaryFramework.konkrete_Klassen;
 
-namespace ConsoleApplication1
+namespace DictionaryFramework.konkrete_Klassen
 {
-    class HashTabQuadProb: Hashing
+    class HashTabQuadProb: Hashing, IMultisetUnsorted
     {
         int key = 0;
 
@@ -33,24 +33,38 @@ namespace ConsoleApplication1
 
          public override bool Search(int elem)
          {
-             throw new NotImplementedException();
+			return false;
+            // throw new NotImplementedException();
          }
 
          public override bool Delete(int elem)
          {
-             throw new NotImplementedException();
+			return false;
+             //throw new NotImplementedException();
          }
 
          public override void Print()
          {
              for (int i = 0; i < ArrayHashTable.Length; i++)
              {
-                 Console.Write("Reihe " + i + ": " + ArrayHashTable[i]);
-                 Console.WriteLine();
+				int? elem = ArrayHashTable[i];
+				if (elem != null) {
+					Console.Write (elem);
+					Console.Write (" ");
+				}
                  
              }
-             Console.WriteLine("=========");
+             Console.WriteLine();
          }
+
+		public void HashTabPrint(){
+			for (int i = 0; i < ArrayHashTable.Length; i++)
+			{
+				Console.Write("Reihe " + i + ": " + ArrayHashTable[i].ToString().PadLeft(2));
+				Console.WriteLine();
+
+			}
+		}
 
     }
 }

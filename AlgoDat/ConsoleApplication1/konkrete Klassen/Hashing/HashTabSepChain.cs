@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApplication1.konkrete_Klassen;
+using DictionaryFramework.konkrete_Klassen;
 
-namespace ConsoleApplication1
+namespace DictionaryFramework.konkrete_Klassen
 {
-    class HashTabSepChain: Hashing
+    class HashTabSepChain: Hashing, IMultisetUnsorted
     {
         int key = 0;
 
@@ -50,12 +50,23 @@ namespace ConsoleApplication1
 
         override public void Print()
         {
+
             for (int i = 0; i < HashTable.Length; i++)
             {
-                Console.Write("Reihe " + i + ": ");
-                (HashTable[i] as SetUnsortedLinkedList).Print();                
+				if (HashTable [i] != null) {
+					(HashTable [i] as SetUnsortedLinkedList).SimplePrint ();
+				}
             }
-			Console.WriteLine ("=========");
+			Console.WriteLine ();
         }
+
+		public void HashTabPrint(){
+			for (int i = 0; i < HashTable.Length; i++)
+			{
+				Console.Write("Reihe " + i + ": ");
+				(HashTable[i] as SetUnsortedLinkedList).Print();                
+			}
+		}
+
     }
 }

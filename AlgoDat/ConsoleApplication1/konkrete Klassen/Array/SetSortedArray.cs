@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1.konkrete_Klassen
+namespace DictionaryFramework.konkrete_Klassen
 {
-    class SetSortedArray : MultisetSortedArray
+    class SetSortedArray : MultisetSortedArray, ISetSorted
     {
 
 		public override bool Insert (int elem){

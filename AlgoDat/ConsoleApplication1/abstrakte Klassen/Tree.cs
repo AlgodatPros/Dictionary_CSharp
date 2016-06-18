@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApplication1.Tree
+namespace DictionaryFramework
 {
 	public abstract class TreeNode<TNode> : INode<TNode>
 	{
@@ -193,7 +193,7 @@ namespace ConsoleApplication1.Tree
 
 			_Print(root);
 			Console.WriteLine();
-			treeprint(root, "");
+			//treeprint(root, "");
 
 		}
 

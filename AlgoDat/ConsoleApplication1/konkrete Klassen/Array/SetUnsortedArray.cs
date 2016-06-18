@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1.konkrete_Klassen
+namespace DictionaryFramework.konkrete_Klassen
 {
 
-    class SetUnsortedArray : MultisetUnsortedArray
+    class SetUnsortedArray : MultisetUnsortedArray, ISetUnsorted
     {
 		public override bool Insert (int elem){
 			if (!Search (elem)) {

@@ -65,6 +65,13 @@
     <Compile Include="konkrete Klassen\Hashing\HashTabQuadProb.cs" />
     <Compile Include="konkrete Klassen\Hashing\HashTabSepChain.cs" />
     <Compile Include="abstrakte Klassen\Hashing.cs" />
+    <Compile Include="Schnittstellen\AlleSets\IMultiset.cs" />
+    <Compile Include="Schnittstellen\AlleSets\IMultisetSorted.cs" />
+    <Compile Include="Schnittstellen\AlleSets\IMultisetUnsorted.cs" />
+    <Compile Include="Schnittstellen\AlleSets\ISet.cs" />
+    <Compile Include="Schnittstellen\AlleSets\ISetSorted.cs" />
+    <Compile Include="Schnittstellen\AlleSets\ISetUnsorted.cs" />
+    <Compile Include="konkrete Klassen\Dictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -81,5 +88,6 @@
   -->
   <ItemGroup>
     <Folder Include="konkrete Klassen\Hashing\" />
+    <Folder Include="Schnittstellen\AlleSets\" />
   </ItemGroup>
 </Project>
