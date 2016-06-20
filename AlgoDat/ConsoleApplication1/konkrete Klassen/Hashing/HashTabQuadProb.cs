@@ -33,12 +33,40 @@ namespace ConsoleApplication1
 
          public override bool Search(int elem)
          {
-             throw new NotImplementedException();
+
+             if (_Search(elem) > 0)
+             {
+                 return true;
+             }
+             else
+                 return false;
+         }
+
+         public int _Search(int elem)
+         {
+             key = hash(elem);
+             int index = 0;
+             for (int i = 0; i < ArrayHashTable.Length; i++)
+             {
+                 index = (key + i) % ArrayHashTable.Length;
+                 if (ArrayHashTable[index] == key)
+                 {
+                     return index;
+                 }
+             }
+             return -1;
          }
 
          public override bool Delete(int elem)
          {
-             throw new NotImplementedException();
+             int index = _Search(elem);
+             if (Search(elem))
+             {
+                 ArrayHashTable[index] = null;
+                 return true;
+             }
+             else
+                 return false;
          }
 
          public override void Print()
