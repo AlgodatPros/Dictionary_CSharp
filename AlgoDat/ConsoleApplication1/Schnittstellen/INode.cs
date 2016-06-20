@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApplication1.Tree
+namespace DictionaryFramework
 {
 	public interface INode<T>
 	{

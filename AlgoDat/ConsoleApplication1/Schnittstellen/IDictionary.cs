@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace DictionaryFramework
 {
-    interface IDictionary
+    public interface IDictionary
     {
         //true = gefunden
         bool Search(int elem);

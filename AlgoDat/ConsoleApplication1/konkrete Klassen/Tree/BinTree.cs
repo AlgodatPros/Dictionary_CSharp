@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApplication1.Tree;
+using DictionaryFramework.Tree;
 
-namespace ConsoleApplication1.Tree{
+namespace DictionaryFramework.Tree{
 	public class BinTreeNode : TreeNode<BinTreeNode>{ }
 }
-namespace ConsoleApplication1.konkrete_Klassen
+namespace DictionaryFramework.konkrete_Klassen
 {
-	public class BinTree : Tree<BinTreeNode>{	}
+	public class BinTree : Tree<BinTreeNode>, ISetSorted{	}
 }
 

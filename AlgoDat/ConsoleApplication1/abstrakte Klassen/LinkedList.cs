@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApplication1
+namespace DictionaryFramework
 {
 	public abstract class LinkedList : IDictionary
 	{
@@ -43,16 +43,23 @@ namespace ConsoleApplication1
 			return false;
 		}
 
+
 		public void Print(){
 			LinkedListNode pointer = head;
 			while (pointer != null) {
 				Console.Write (pointer.elem + " "); 
 				pointer = pointer.next;
 			}
-			Console.WriteLine();
+				Console.WriteLine ();
 		}
 
-
+		public void SimplePrint(){
+			LinkedListNode pointer = head;
+			while (pointer != null) {
+				Console.Write (pointer.elem.ToString().PadLeft(2) + " "); 
+				pointer = pointer.next;
+			}
+		}
 
 	}
 

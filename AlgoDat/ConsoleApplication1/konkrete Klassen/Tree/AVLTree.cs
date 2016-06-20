@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApplication1.Tree;
+using DictionaryFramework.Tree;
 
-namespace ConsoleApplication1.Tree{
+namespace DictionaryFramework.Tree{
 	public class AVLTreeNode : TreeNode<AVLTreeNode> {
 		public int balance = 0;
 	}
 }
 
-namespace ConsoleApplication1.konkrete_Klassen
+namespace DictionaryFramework.konkrete_Klassen
 {
-	public class AVLTree : Tree<AVLTreeNode> {
+	public class AVLTree : Tree<AVLTreeNode>, ISetSorted {
 
 		public override bool Insert(int elem) {
 			AVLTreeNode parentnode = null;

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApplication1.konkrete_Klassen;
+using DictionaryFramework.konkrete_Klassen;
 
-namespace ConsoleApplication1
+namespace DictionaryFramework
 {
     abstract class Hashing : IDictionary
     {
