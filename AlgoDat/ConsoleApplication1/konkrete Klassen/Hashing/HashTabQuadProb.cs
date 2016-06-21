@@ -18,11 +18,15 @@ namespace DictionaryFramework.konkrete_Klassen
 
             for (int i = 1; i < ArrayHashTable.Length - 1; i++)
             {
-                if (ArrayHashTable[key] != null)
+                if (key >= 0 && ArrayHashTable[key] != null)
                 {
-                    key = (key + i) % 10;
+                    key = (key + (int)Math.Pow(i, 2)) % ArrayHashTable.Length;
+					if (ArrayHashTable [key] != null) {
+
+						key = (key - (int)Math.Pow (i, 2)) % ArrayHashTable.Length;
+					}
                 }
-                else
+                else if (key >= 0)
                 {
                     ArrayHashTable[key] = elem;
                     return true;
@@ -47,11 +51,16 @@ namespace DictionaryFramework.konkrete_Klassen
              int index = 0;
              for (int i = 0; i < ArrayHashTable.Length; i++)
              {
-                 index = (key + i) % ArrayHashTable.Length;
-                 if (ArrayHashTable[index] == key)
+                 index = (key + (int)Math.Pow(i, 2)) % ArrayHashTable.Length;
+				if (index>=0 && ArrayHashTable[index] == key)
                  {
                      return index;
-                 }
+                 } else if(ArrayHashTable[index] != key) {
+					index = (key - (int)Math.Pow(i, 2)) % ArrayHashTable.Length;
+					if ( index>= 0 && ArrayHashTable[index] == key) {
+						return index;
+					}
+				}
              }
              return -1;
          }
@@ -80,6 +89,7 @@ namespace DictionaryFramework.konkrete_Klassen
                  
              }
              Console.WriteLine();
+			HashTabPrint ();
          }
 
 		public void HashTabPrint(){

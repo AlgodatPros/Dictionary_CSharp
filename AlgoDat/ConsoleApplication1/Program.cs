@@ -12,6 +12,7 @@ namespace DictionaryFramework
     {
         static void Main(string[] args)
         {
+			//Demo ();
 			IDictionary[] dictionaries =  {
 				Dictionary.Create (SortedSet.BinTree), //oder Dictionary.Create(Set.BinTree)
 				Dictionary.Create (SortedSet.AVLTree),
