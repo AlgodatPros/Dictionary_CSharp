@@ -193,7 +193,7 @@ namespace DictionaryFramework
 
 			_Print(root);
 			Console.WriteLine();
-			//treeprint(root, "");
+			treeprint(root, "");
 
 		}
 

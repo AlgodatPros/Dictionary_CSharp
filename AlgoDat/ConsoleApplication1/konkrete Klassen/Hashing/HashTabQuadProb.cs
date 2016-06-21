@@ -33,8 +33,6 @@ namespace DictionaryFramework.konkrete_Klassen
 
          public override bool Search(int elem)
          {
-<<<<<<< HEAD
-
              if (_Search(elem) > 0)
              {
                  return true;
@@ -56,15 +54,10 @@ namespace DictionaryFramework.konkrete_Klassen
                  }
              }
              return -1;
-=======
-			return false;
-            // throw new NotImplementedException();
->>>>>>> origin/master
          }
 
          public override bool Delete(int elem)
          {
-<<<<<<< HEAD
              int index = _Search(elem);
              if (Search(elem))
              {
@@ -73,10 +66,6 @@ namespace DictionaryFramework.konkrete_Klassen
              }
              else
                  return false;
-=======
-			return false;
-             //throw new NotImplementedException();
->>>>>>> origin/master
          }
 
          public override void Print()
