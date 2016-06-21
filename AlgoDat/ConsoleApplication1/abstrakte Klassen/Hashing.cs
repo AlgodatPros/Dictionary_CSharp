@@ -9,8 +9,8 @@ namespace DictionaryFramework
 {
     abstract class Hashing : IDictionary
     {
-		protected LinkedList[] HashTable = new LinkedList[10];
-        protected int?[] ArrayHashTable = new int?[10]; 
+		protected LinkedList[] HashTable = new LinkedList[11];
+        protected int?[] ArrayHashTable = new int?[11]; 
 		
 		protected Hashing(){
 			for (int i = 0; i < HashTable.Length; i++)
@@ -21,7 +21,7 @@ namespace DictionaryFramework
 
         protected int hash(int x)
         {
-            return x % 10;
+            return x % ArrayHashTable.Length;
         }
 
         abstract public bool Insert(int elem);
